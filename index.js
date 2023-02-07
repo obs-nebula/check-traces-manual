@@ -32,7 +32,7 @@ app.get('/', (_, res) => {
   span.end();
 });
 
-app.listen(port, () => {
+const server = app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
 });
 
