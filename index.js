@@ -17,7 +17,7 @@ provider.addSpanProcessor(new SimpleSpanProcessor(exporter));
 provider.addSpanProcessor(new SimpleSpanProcessor(new ConsoleSpanExporter()));
 provider.register();
 
-const tracer = opentelemetry.trace.getTracer(process.env.npm_package_name);
+const tracer = opentelemetry.trace.getTracer(process.env.npm_package_name, process.env.npm_package_version);
 
 const app = express();
 const port = 8080;
