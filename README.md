@@ -6,7 +6,7 @@ Same as https://github.com/obs-nebula/check-traces, but manual.
 
 | Package | Why |
 | ----------- | ----------- |
-| @opentelemetry/exporter-jaeger | (deprecated) To export to Jaeger |
+| @opentelemetry/exporter-trace-otlp-http | To export to Jaeger via OTLP/HTTP |
 | @opentelemetry/resources | To be used with `semantic-conventions` to identify the application/service's name |
 | @opentelemetry/sdk-trace-base | For manual instrumentation  |
 | @opentelemetry/semantic-conventions | To be used with `resources` to identify the application/service's name |

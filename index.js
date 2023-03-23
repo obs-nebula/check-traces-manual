@@ -1,11 +1,11 @@
 const opentelemetry = require('@opentelemetry/api');
 const { Resource } = require('@opentelemetry/resources');
 const { SemanticResourceAttributes } = require('@opentelemetry/semantic-conventions');
-const { JaegerExporter } = require('@opentelemetry/exporter-jaeger');
+const { OTLPTraceExporter } = require('./node_modules/@opentelemetry/exporter-trace-otlp-http');
 const { BasicTracerProvider, ConsoleSpanExporter, SimpleSpanProcessor } = require('@opentelemetry/sdk-trace-base');
 const express = require('express');
 
-const exporter = new JaegerExporter();
+const exporter = new OTLPTraceExporter();
 
 const provider = new BasicTracerProvider({
   resource: new Resource({
