@@ -1,10 +1,10 @@
 # check-traces-manual
 
-Same as https://github.com/obs-nebula/check-traces, but manual.
+Same as https://github.com/obs-nebula/check-traces, but using manual instrumentation.
 
 > OTEL-JS packages in use:
 
-| Package | Why |
+| Package | |
 | ----------- | ----------- |
 | @opentelemetry/exporter-trace-otlp-http | To export to Jaeger via OTLP/HTTP |
 | @opentelemetry/resources | To be used with `semantic-conventions` to identify the application/service's name |
