@@ -6,42 +6,33 @@ Same as https://github.com/obs-nebula/check-traces, but using manual instrumenta
 
 | Package | |
 | ----------- | ----------- |
-| @opentelemetry/exporter-trace-otlp-http | To export to Jaeger via OTLP/HTTP |
+| @opentelemetry/exporter-trace-otlp-http | To export to OTELCOL via OTLP/HTTP |
 | @opentelemetry/resources | To be used with `semantic-conventions` to identify the application/service's name |
 | @opentelemetry/sdk-trace-base | For manual instrumentation  |
 | @opentelemetry/semantic-conventions | To be used with `resources` to identify the application/service's name |
 | @opentelemetry/api | To get the trace instance and control spans creation |
 
+## How to run
 
-Start Jaeger locally
-
-```
+```shell
+# This will download and start OTELCOL
 ./scripts/start.sh
-```
 
-Start the application
-
-```
+# Start the example
 npm install
-npm start &
+npm start
 ```
+### Test
 
-Access the application to generate traces
-[http://localhost:8080/](http://localhost:8080)
-
-Or copy and paste to generate spans every second
-
+```shell
+# Create some spans
+curl -v http://localhost:8080
+# Check the results
+curl -s http://localhost:8888/metrics
 ```
-watch -n 1 curl -v http://localhost:8080
-```
+### Stop the application and OTELCOL
 
-See the results in Jaeger UI
-
-[http://localhost:16686/](http://localhost:16686)
-
-Stop the application and Jaeger
-
-```
+```shell
 killall node
 ./scripts/stop.sh
 ```
