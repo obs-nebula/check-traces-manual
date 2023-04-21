@@ -20,6 +20,7 @@ Same as https://github.com/obs-nebula/check-traces, but using manual instrumenta
 
 # Start the example
 npm install
+npm run build
 npm start
 ```
 ### Test

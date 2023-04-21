@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node .",
     "lint": "eslint . --ext .ts",
-    "postinstall": "tsc --build tsconfig.json",
+    "build": "tsc --build tsconfig.json",
     "clean": "rm -Rf dist"
   },
   "license": "MIT",
