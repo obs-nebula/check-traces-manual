@@ -1,5 +1,7 @@
 # check-traces-manual
 
+[![ci](https://github.com/obs-nebula/check-traces-manual/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/obs-nebula/check-traces-manual/actions/workflows/ci.yml)
+
 Same as https://github.com/obs-nebula/check-traces, but using manual instrumentation.
 
 > OTEL-JS packages in use:
